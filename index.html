@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spartan Holdings</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="js/interface.js"></script>
+</head>
+<body>
+<h1 id="title">Spartan Holdings</h1>
+<div class="content">
+    <div class="menuDiv" id="menuDiv">
+        <button type="button" class="menuBtn" id="newAccountBtn">New Account</button>
+        <button type="button" class="menuBtn" id="movementBtn">Deposit or Withdrawal</button>
+        <button type="button" class="menuBtn" id="wireTransferBtn">Wire transfer</button>
+        <button type="button" class="menuBtn" id="statementBtn">Account Statement</button>
+        <button type="button" class="menuBtn" id="resetMonthBtn">Advance Month</button>
+    </div>
+    <div class="newAccountDiv" id="newAccountDiv">
+        <label for="newHolder">Account Holder</label>
+        <input type="text" name="newHolder" id="newHolder" placeholder="Account Holder">
+        <div class="accTypeRadioDiv" id="accTypeRadioDiv">
+            <p>Account type</p>
+            <input type="radio" name="accType" id="newBasicRadio">
+            <label for="newBasicRadio">Basic Account</label>
+            <input type="radio" name="accType" id="newStudentRadio">
+            <label for="newStudentRadio">Student Account</label>
+            <input type="radio" name="accType" id="newPlatinumRadio">
+            <label for="newPlatinumRadio">Platinum Account</label>
+        </div>
+        <div class="newAccBtn">
+            <button type="button" id="rejectNewBtn">&#10006;</button>
+            <button type="button" id="acceptNewBtn">&#10004;</button>
+        </div>
+    </div>
+    <div class="transferDiv" id="transferDiv">
+        <div class="transferAccountsDiv">
+            <div class="transferAccOutDiv">
+                <label for="transAccNumberOut">Sender Account Number</label>
+                <select id="transAccNumberOut">
+                </select>
+            </div>
+            <div class="transferAccInDiv">
+                <label for="transAccNumberIn">Recipient Account Number</label>
+                <select id="transAccNumberIn">
+                </select>
+            </div>
+        </div>
+        <label for="transValue">Value</label>
+        <input type="number" min="0" step=".01" id="transValue" placeholder="Value">
+        <div class="transferBtn">
+            <button type="button" id="rejectTransBtn">&#10006;</button>
+            <button type="button" id="acceptTransBtn">&#10004;</button>
+        </div>
+    </div>
+    <div class="movementDiv" id="movementDiv">
+        <label for="movAccNumber">Account Number</label>
+        <select id="movAccNumber">
+        </select>
+        <div class="movTypeRadioDiv" id="movTypeRadioDiv">
+            <p>Movement type</p>
+            <input type="radio" name="movType" id="depositRadio">
+            <label for="depositRadio">Deposit</label>
+            <input type="radio" name="movType" id="withdrawalRadio">
+            <label for="withdrawalRadio">Withdrawal</label>
+        </div>
+        <label for="movValue">Value</label>
+        <input type="number" min="0" step=".01" id="movValue" placeholder="Value">
+        <div class="movementBtn">
+            <button type="button" id="rejectMovBtn">&#10006;</button>
+            <button type="button" id="acceptMovBtn">&#10004;</button>
+        </div>
+    </div>
+    <div class="statementDiv" id="statementDiv">
+        <label for="statAccNumber">Account Number</label>
+        <select id="statAccNumber">
+        </select>
+        <div class="statementBtn">
+            <button type="button" id="rejectStatBtn">&#10006;</button>
+            <button type="button" id="acceptStatBtn">&#x1F50E;&#xFE0E;</button>
+        </div>
+        <div id="statTableDiv">
+            <table id="statTable">
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Value</th>
+                    <th>Balance</th>
+                </tr>
+                </thead>
+                <tbody id="statTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

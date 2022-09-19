@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+body {
+    background: #2f2f2f;
+}
+
+#title {
+    color: gold;
+    text-align: center;
+    margin: 5px;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.content {
+    position: relative;
+    top: 50%;
+    transform: translateY(40%);
+}
+
+.menuDiv {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: goldenrod;
+    width: 50vw;
+    min-height: 50vh;
+    border-radius: 75px;
+}
+
+.menuBtn {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    width: 70%;
+    height: 50px;
+}
+
+.newAccountDiv {
+    margin: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #5b5b5b;
+    width: 50vw;
+    min-height: 50vh;
+    border-radius: 75px;
+}
+
+.transferDiv {
+    margin: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #5b5b5b;
+    width: 50vw;
+    min-height: 50vh;
+    border-radius: 75px;
+}
+
+.movementDiv {
+    margin: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #5b5b5b;
+    width: 50vw;
+    min-height: 50vh;
+    border-radius: 75px;
+}
+
+.statementDiv {
+    margin: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #5b5b5b;
+    width: 50vw;
+    min-height: 50vh;
+    border-radius: 75px;
+}
