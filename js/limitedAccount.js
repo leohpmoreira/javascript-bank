@@ -41,21 +41,16 @@ export default class LimitedAccount extends Account {
     withdraw(amount, type) {
         let value = parseFloat(amount)
         if (value > this._withdrawLimit) return 'Higher amount than defined limit'
-        if (value <= this._balance) {
-            this._balance -= value
-            this.storeStatement(value, type)
-            return 'Success'
-        }
-        else {
-            console.log('Balance: ' + this._balance + 'Value: ' + value)
-            return 'Insufficient funds'
-        }
+        if (value > this._balance) return 'Insufficient funds'
+        this._balance -= value
+        this.storeStatement(value, type)
         if (type === 'Transfer out') {
             this._transferCounter += 1
             if (this._transferCounter >= this._transferCounter) {
                 this.withdraw(0.50, 'Extra Transfer Fee')
             }
         }
+        return 'Success'
     }
 
     resetLimit() {
