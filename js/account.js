@@ -29,7 +29,10 @@ export default class Account {
 
     storeStatement(value, type) {
         let info = {
-            date: new Date().toISOString().substring(0,10), type: type, value: value, balanceAfter: this._balance
+            date: new Date().toISOString().substring(0,10),
+            type: type,
+            value: (Math.round(value * 100) / 100).toFixed(2),
+            balanceAfter: (Math.round(this._balance * 100) / 100).toFixed(2)
         }
         this._statement.push(info)
     }

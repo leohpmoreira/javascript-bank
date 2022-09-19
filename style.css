@@ -9,13 +9,13 @@ button:hover {
 }
 
 body {
-    background: #2f2f2f;
+    background: #282828;
 }
 
 #title {
-    color: gold;
+    color: #DAA520;
     text-align: center;
-    margin: 5px;
+    margin: 10px;
     font-size: 3rem;
     font-weight: bolder;
 }
@@ -26,7 +26,7 @@ body {
     transform: translateY(40%);
 }
 
-.menuDiv {
+.contentDiv {
     margin: auto;
     display: flex;
     justify-content: center;
@@ -38,6 +38,10 @@ body {
     border-radius: 75px;
 }
 
+#newAccountDiv, #transferDiv, #movementDiv, #statementDiv {
+    display: none;
+}
+
 .menuBtn {
     margin-top: 10px;
     font-size: 1.5rem;
@@ -45,50 +49,92 @@ body {
     height: 50px;
 }
 
-.newAccountDiv {
-    margin: auto;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: #5b5b5b;
-    width: 50vw;
-    min-height: 50vh;
-    border-radius: 75px;
+.inputElem {
+    font-size: 1.25rem;
+    margin: 5px;
+    width: 80%;
+    height: 35px;
+    text-align: center;
 }
 
-.transferDiv {
-    margin: auto;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: #5b5b5b;
-    width: 50vw;
-    min-height: 50vh;
-    border-radius: 75px;
+label {
+    font-size: 1.25rem;
+    color: white;
 }
 
-.movementDiv {
-    margin: auto;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: #5b5b5b;
-    width: 50vw;
-    min-height: 50vh;
-    border-radius: 75px;
+.radioDiv {
+    margin: 10px;
+    font-size: 1.25rem;
+    color: white;
+    text-align: center;
 }
 
-.statementDiv {
+.accRejectBtnDiv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.acceptRejectBtn {
+    font-size: 2rem;
+    width: 40%;
+    height: 50px;
+}
+
+.transferAccountsDiv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.transferAccOutDiv, .transferAccInDiv {
     margin: auto;
-    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: #5b5b5b;
-    width: 50vw;
-    min-height: 50vh;
-    border-radius: 75px;
+}
+
+#transAccNumberOut, #transAccNumberIn {
+    font-size: 2rem;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+
+#movAccNumber, #statAccNumber {
+    font-size: 2rem;
+    width: 40%;
+    height: 50px;
+    text-align: center;
+}
+
+#statTableDiv {
+    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: auto;
+    width: 80%;
+    height: 25vh;
+}
+
+#statTable {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+#statTable th {
+    border: 1px solid #000000;
+    padding: 5px;
+    background:#F0F0F0;
+    top: 0;
+    position: sticky;
+}
+
+#statTable td {
+    border: 1px solid #000000;
+    background: #ffffff;
+    padding: 5px;
 }

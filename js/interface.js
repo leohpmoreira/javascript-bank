@@ -120,7 +120,7 @@ acceptTransBtn.addEventListener('click', () => {
         alert('Invalid value')
         return
     }
-    const error = banking.transfer(transAccNumberOut.value, transAccNumberIn.value, transValue.value)
+    const error = banking.transfer(transAccNumberOut.value, transAccNumberIn.value, formatNumber(transValue.value))
     if (error !== 'Success') {
         alert(error)
         return
@@ -143,11 +143,11 @@ acceptMovBtn.addEventListener('click', () => {
         return
     }
     if (depositRadio.checked) {
-        error = banking.accountDeposit(movAccNumber.value, movValue.value)
+        error = banking.accountDeposit(movAccNumber.value, formatNumber(movValue.value))
     }
     else {
         if (withdrawalRadio.checked) {
-            error = banking.accountWithdraw(movAccNumber.value, movValue.value)
+            error = banking.accountWithdraw(movAccNumber.value, formatNumber(movValue.value))
         }
         else {
             alert('Invalid operation type')
@@ -259,6 +259,10 @@ function removeOptions() {
     while (options.length > 0) {
         options[0].parentNode.removeChild(options[0])
     }
+}
+
+function formatNumber(number) {
+    return (Math.round(number * 100) / 100).toFixed(2);
 }
 
 banking.newAccount('Anthony', 'Platinum')
